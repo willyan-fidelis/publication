@@ -1,6 +1,21 @@
-## Publicações
+# Publicações
 
 Publicações de Wilyan Fidelis, entusiasta em tecnologia com mais de 12 anos de experiência na área de automação industrial e programação. Veja mais na minha página [Willyan Fidelis](https://willyan.fidelisduino.com/).
+
+## A collapsible section with markdown
+<details>
+  <summary>Click to expand!</summary>
+  
+  ## Heading
+  1. A numbered
+  2. list
+     * With some
+     * Sub bullets
+</details>
+
+
+
+
 
 ### Markdown
 
