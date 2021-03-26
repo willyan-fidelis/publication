@@ -20,12 +20,30 @@ Publicações de Wilyan Fidelis, entusiasta em tecnologia com mais de 12 anos de
   ### Python + MySQL
   <details>
     <summary>Click to expand!</summary>
+    
+    Link video YouTube:
+    https://www.youtube.com/watch?v=V7L2Sks8Osk
+    
+    Code:
+    ```python
+    import mysql.connector
 
-    ## Heading
-    1. A numbered
-    2. list
-       * With some
-       * Sub bullets
+    mydb = mysql.connector.connect(
+      host="localhost",
+      user="root",
+      password="myroot",
+      database="mt_public_db"
+    )
+
+    mycursor = mydb.cursor()
+
+    mycursor.execute("SELECT * FROM customer")
+
+    myresult = mycursor.fetchall()
+
+    for x in myresult:
+      print(x)
+    ```
   </details>
 
 </details>
