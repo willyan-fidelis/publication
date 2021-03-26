@@ -25,10 +25,10 @@ Publicações de Wilyan Fidelis, entusiasta em tecnologia com mais de 12 anos de
 
 ## Python
 <details>
-  <summary>Click to expand!</summary>
+  <summary>Veja todos artigos em Python</summary>
   
   ### Python + MySQL
-  [YouTube](https://github.com/willyan-fidelis/publication/blob/gh-pages/python-mysql.md)
+  [Artigo](https://github.com/willyan-fidelis/publication/blob/gh-pages/python-mysql.md)
 </details>
 
 ## A collapsible section with markdown
