@@ -1,8 +1,6 @@
-## Welcome to GitHub Pages
+## Publicações
 
-You can use the [editor on GitHub](https://github.com/willyan-fidelis/publication/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Publicações de Wilyan Fidelis, entusiasta em tecnologia com mais de 12 anos de experiência na área de automação industrial e programação. Veja mais na minha página [Willyan Fidelis](https://willyan.fidelisduino.com/).
 
 ### Markdown
 
