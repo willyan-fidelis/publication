@@ -6,11 +6,28 @@ Publicações de Wilyan Fidelis, entusiasta em tecnologia com mais de 12 anos de
 <details>
   <summary>Click to expand!</summary>
   
-  ## Heading
-  1. A numbered
-  2. list
-     * With some
-     * Sub bullets
+  ### Primeiros passos com python
+  <details>
+    <summary>Click to expand!</summary>
+
+    ## Heading
+    1. A numbered
+    2. list
+       * With some
+       * Sub bullets
+  </details>
+  
+  ### Python + MySQL
+  <details>
+    <summary>Click to expand!</summary>
+
+    ## Heading
+    1. A numbered
+    2. list
+       * With some
+       * Sub bullets
+  </details>
+
 </details>
 
 ## A collapsible section with markdown
