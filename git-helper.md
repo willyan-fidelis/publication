@@ -13,13 +13,13 @@ https://pt.stackoverflow.com/questions/3231/qual-a-diferen%c3%a7a-entre-os-coman
 
 
 #### Untrack arquivos já adicionados ao repositorio
-Comandos:
-Primeiro remove todos os arquivos do arquivo index:
-git rm -r --cached .
-Agora adiciona tudo, considerando o gitignore alterado:
-git add .
-Por fim commita:
-git commit -m ".gitignore fix"
+Comandos:  
+Primeiro remove todos os arquivos do arquivo index:  
+git rm -r --cached .  
+Agora adiciona tudo, considerando o gitignore alterado:  
+git add .  
+Por fim commita:  
+git commit -m ".gitignore fix"  
 
 Descrição:  
 Esses comandos realizam o Untrack de arquivos que ja estavam sendo traqueados, mas hoje faze parte do gitignore.  
