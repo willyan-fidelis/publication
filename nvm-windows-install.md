@@ -8,5 +8,8 @@ Semelhante ao famoso nvm original, para linux.
 Siga esses passos:
 https://github.com/coreybutler/nvm-windows
 
+As versões instaladas e demais arquivos podem ser encontrados na pasta:
+C:\Users\willy\AppData\Roaming\nvm
+Onde 'willy' é o usuário.
 
 Fim!
