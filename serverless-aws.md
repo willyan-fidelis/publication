@@ -6,8 +6,9 @@ Instalando Docker
 Instalando AWS Toolkit para o vscode  
 https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install-linux.html  
 
-# Videos
+# Videos/Teste Local
 https://www.youtube.com/watch?v=DA3hlLxTl-8  
+https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-getting-started-hello-world.html  
 
 ## Docker não inicia no WSL?:
 https://github.com/MicrosoftDocs/WSL/issues/457  
