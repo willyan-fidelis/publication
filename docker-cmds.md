@@ -11,3 +11,6 @@ cat /etc/issue
 Para matar e sair do container:  
 ctrl + D  
 Para apenas sair do container, deixando o mesmo aberto:  
+ctrl P + ctrl Q
+Para voltar a atachar:
+docker attach containerID
