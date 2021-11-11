@@ -28,3 +28,7 @@ echo 'if [ -z "$RUNNING" ]; then' >> ~/.bashrc
 echo '    sudo dockerd > /dev/null 2>&1 &' >> ~/.bashrc  
 echo '    disown' >> ~/.bashrc  
 echo 'fi' >> ~/.bashrc  
+  
+  
+Por fim bora testar:  
+docker run hello-world  
