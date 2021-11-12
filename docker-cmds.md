@@ -17,3 +17,6 @@ docker attach containerID
 
 Listar containers rodando:  
 docker PS  
+  
+Listar imagens:  
+docker images  
