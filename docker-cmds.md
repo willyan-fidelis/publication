@@ -54,6 +54,10 @@ docker commit f7ff26213666 fidelis/nginx-ubuntu -> Assim o docker não save e na
 Bora testar essa imagem com outra porta no host?:  
 docker run -i -t -p 6660:80 fidelis/nginx-ubuntu:1.0 /bin/bash  
 Depois vc mesmo tem ainda que inciar o serviço, afinal o commit salva as instalações mas não starta o servico sozinho:  
-/etc/init.d/nginx start
+/etc/init.d/nginx start  
 Ou iniciar ja com serviço nginx-server de pé:  
-sudo docker run -d --name nginx-server -p 6660:80 fidelis/nginx-ubuntu:1.0 
+sudo docker run -d --name nginx-server -p 6660:80 fidelis/nginx-ubuntu:1.0  
+  
+Rodando um processo de um container por fora do mesmo:  
+docker exec 88c686ec529f /etc/init.d/nginx start  
+Onde 88c686ec529f é o container_id e etc/init.d/nginx start é o comando solicitado para o container.  
