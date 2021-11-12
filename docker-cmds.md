@@ -20,3 +20,6 @@ docker PS
   
 Listar imagens:  
 docker images  
+
+Expor porta 80 do container na porta 8080 ao rodar:  
+docker run -i -t -p 8080:80 ubuntu:14.10 /bin/bash  
