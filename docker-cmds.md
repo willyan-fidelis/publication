@@ -18,7 +18,9 @@ Para voltar a atachar:
 docker attach containerID
 
 Listar containers rodando:  
-docker PS  
+docker ps  
+Ou para ver all com  sudo ainda:  
+sudo docker ps -a  
   
 Listar imagens:  
 docker images  
