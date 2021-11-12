@@ -84,4 +84,21 @@ docker run -it --name web2 --link first-webserver:web1 fidelis/nginx-ubuntu:1.0
 
 Probelmas comuns:  
 comandos ps não recochecido, necessario instalar(https://www.vivaolinux.com.br/dica/Docker-ps-command-not-found-Resolvido):  
-apt update && apt install -y procps
+apt update && apt install -y procps  
+Comando ping nao reconhecido:  
+apt install iputils-ping  
+  
+---------------- Dockerfile ----------------  
+Coloca cada passo para criar uma imagem de container  
+  
+Bora criar o primeiro Dockerfile!  
+Em uma pasta crire um arquivo com o vim:  
+vim Dockerfile  
+Depois digite linha a linha no vim:  
+FROM ubuntu:14.04  
+MAINTANCE willyan_fidelis@hotmail.com  
+RUN apt-get update && apt-get install -y apache2 && apt-get clear  
+  
+O vim é chato, ao abrir edite a vontade, depois aperte ESC, depois :x para salvar ou :qa! para sair!  
+Bom, agora buildar passando .(ponto), ou seja, o diretorio atual:  
+docker build .  
