@@ -61,3 +61,27 @@ sudo docker run -d --name nginx-server -p 6660:80 fidelis/nginx-ubuntu:1.0
 Rodando um processo de um container por fora do mesmo:  
 docker exec 88c686ec529f /etc/init.d/nginx start  
 Onde 88c686ec529f é o container_id e etc/init.d/nginx start é o comando solicitado para o container.  
+  
+Mais comandos:  
+docker inspect 88c686ec529f ->inspeciona detalhes, como ip interno e afins  
+Por fora do container com nginx: curl 172.17.0.2:80 -> retona a pagina de boas vindas do nging  
+docker stats 88c686ec529f -> status de consumo de memoria, rede e processamento que o container esta utilizando do host.  
+docker stop 88c686ec529f -> Para um container, mas nao remove. Vc visualiza ele com docker ps -a
+docker start 88c686ec529f -> Inicia um container  
+docker rm 88c686ec529f -> Remove, mas so com container parado  
+docker rm -f 88c686ec529f -> Força a remoção, mesmo com container rorando.  
+O mesmo vale para apagar imagens:  
+docker rmi image_id -> Remove, mas so com container parado  
+docker rmi -f image_id -> Força a remoção, mesmo com container rorando.  
+Todos os containers com esse imagem tbem serao removidos.  
+docker images -> listta todas as imagens  
+  
+Fazendo dois container com nginx se comunicar.  
+Primeiro inciar o primeiro container, de preferencia passando um nome como option, senao o nome sera gerado de forma random e vc precisa saber o nome mais tarde:  
+docker run --name first-webserver -i -t -p 6660:80 fidelis/nginx-ubuntu:1.0 /bin/bash
+Agora iniciamos o segundo dando um nome qualquer nesse caso web2, fazendo um link com o first-webserver que agora tem um nickname web1:  
+docker run -it --name web2 --link first-webserver:web1 fidelis/nginx-ubuntu:1.0
+
+Probelmas comuns:  
+comandos ps não recochecido, necessario instalar(https://www.vivaolinux.com.br/dica/Docker-ps-command-not-found-Resolvido):  
+apt update && apt install -y procps
