@@ -101,11 +101,14 @@ RUN apt-get update && apt-get install -y apache2 && apt-get clear
 Ou:  
 FROM fidelis/nginx-ubuntu  
 MAINTANCE willyan_fidelis@hotmail.com  
-RUN apt-get update && /etc/init.d/nginx start apt-get clear  
-  
+RUN apt-get update && /etc/init.d/nginx start && apt install -y procps
+  ------  
 O vim é chato, ao abrir edite a vontade, depois aperte ESC, depois :x para salvar ou :qa! para sair!  
 Bom, agora buildar passando .(ponto), ou seja, o diretorio atual:  
 docker build .  
 Pronto, veja suas imagens e tera uma nova! So que nao deu nenhum nome nem tag(execute docker images e veja), que é importante!  
 Faca assim(paase -t para tag + versao):  
 docker build -t fidelis/server_test:1.0 .
+Agora ja podemos usar essa imagem normalmente:  
+docker run -it fidelis/server_test:1.0 /bin/bash  
+
