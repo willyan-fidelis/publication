@@ -47,3 +47,4 @@ docker diff f7ff26213666
 Uma coisa super utel é deixar instalações/alterações salvas no container, afinal ao desligar tudo sera perdido e o container fica nas condições inicias.  
 Para isso faça um commit dessas alterações, que salvar um conaiter, onde f7ff26213666 é o id, fidelis/nginx-ubuntu é o nome e 1.0 é a versao que vc esta dando para esse novo container, com um estado salvo:  
 docker commit f7ff26213666 fidelis/nginx-ubuntu:1.0  
+docker commit f7ff26213666 fidelis/nginx-ubuntu -> Assim o docker não save e nao gerencia as versoes, e sera considerada a last!
