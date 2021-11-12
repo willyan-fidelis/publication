@@ -23,7 +23,10 @@ Ou para ver all com  sudo ainda:
 sudo docker ps -a  
   
 Listar imagens:  
-docker images  
+docker images 
+
+Stop docker:  
+docker stop container_id  
 
 Expor porta 80 do container na porta 8080 ao rodar:  
 docker run -i -t -p 8080:80 ubuntu:14.10 /bin/bash  
