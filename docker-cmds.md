@@ -45,6 +45,12 @@ Vc pode ver as alteração da ultima vez que seu container rodou com(onde f7ff26
 docker diff f7ff26213666  
   
 Uma coisa super utel é deixar instalações/alterações salvas no container, afinal ao desligar tudo sera perdido e o container fica nas condições inicias.  
-Para isso faça um commit dessas alterações, que salvar um conaiter, onde f7ff26213666 é o id, fidelis/nginx-ubuntu é o nome e 1.0 é a versao que vc esta dando para esse novo container, com um estado salvo:  
+Para isso faça um commit dessas alterações, que salvar um conaiter, onde f7ff26213666 é o id do container, fidelis/nginx-ubuntu é o nome e 1.0 é a versao que vc esta dando para esse novo container, com um estado salvo:  
 docker commit f7ff26213666 fidelis/nginx-ubuntu:1.0  
 docker commit f7ff26213666 fidelis/nginx-ubuntu -> Assim o docker não save e nao gerencia as versoes, e sera considerada a last!
+Bora testar essa imagem com outra porta no host?:  
+docker run -i -t -p 6660:80 fidelis/nginx-ubuntu:1.0 /bin/bash  
+Depois vc mesmo tem ainda que inciar o serviço, afinal o commit salva as instalações mas não starta o servico sozinho:  
+/etc/init.d/nginx start
+Ou iniciar ja com serviço nginx-server de pé:  
+sudo docker run -d --name nginx-server -p 6660:80 fidelis/nginx-ubuntu:1.0 
