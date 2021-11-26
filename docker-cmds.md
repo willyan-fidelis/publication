@@ -32,7 +32,7 @@ Expor porta 80 do container na porta 8080 ao rodar:
 docker run -i -t -p 8080:80 ubuntu:14.10 /bin/bash  
   
 Uma vez container rodando em modo interativo vc pode instalar qq coisa, como um servidor nginx:  
-apt-get install nginx  
+apt install nginx  
 Para ver se ta rodando:  
 ps -ef  
 Nõa ta rodando então execute:  
