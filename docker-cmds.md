@@ -113,7 +113,7 @@ Agora ja podemos usar essa imagem normalmente:
 docker run -it fidelis/server_test:1.0 /bin/bash  
 
 
-2022.01.30:  
+------------------- 2022.01.30 ------------------->  
 Algumas das principais pastas do docker:  
 /var/lib/docker  
 /var/lib/docker/volumes  
@@ -142,4 +142,11 @@ Primeiros criam container com nginx: docker container run -d --name nginx1 -p 80
 Agora copiamos o arquivo index.html: docker container cp nginx1:/usr/share/nginx/html/index.html ./code  
 Dando um bind de um arquivo do host para dentro de um container(legal pq não mapeamos um volume e sim um arquivo apenas que esta em uma pasta do host):  
 docker container run -d --name nginx2 -v $(pwd)/code/index.html:/usr/share/nginx/html/index.html -p 8181:80 nginx  
-
+  
+Rodando um container no boot:  
+service docker stop  
+docker update --restart=always CONTAINER_ID  
+service docker start  
+Para remover do boot:  
+docker update --restart=no CONTAINER_ID  
+------------------- 2022.01.30 <-------------------  
