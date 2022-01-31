@@ -126,5 +126,20 @@ Remover tres containers(g79  047 4k5) ficaria assim: docker rm -f g79  047 4k5
 Apagar volumes:  
 docker volume prune  
 Ao deletar volumes um grande espaço pode ser limpo e economizado(mysql por exemplo cria um volume altomaticamente com docker run).  
-
+  
+Ao criar automaticamnte um volume vc pode ficar confuso(mysql cria automaticamnte com run), ao oivez disso podemos criar nossos volumes para futuramnete passar como argumento de um docker run!  
+Criando um volume: docker volume create my-first-mysql-volume  
+Usando com um container: docker container run -d --name my-first-mysql-db -v my-first-mysql-volume:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=myroot mysql  
+Crando um volume inline na hora da criação do container:  
+docker container run -d --name my-first-mysql-db2 -v my-first-mysql-volume2:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=myroot mysql  
+Agora com a nova sintaxe recomentada com mount:  
+docker container run -d --name my-first-mysql-db3 --mount 'type=volume,source=my-first-mysql-volume3,target=/var/lib/mysql' -e MYSQL_ROOT_PASSWORD=myroot mysql  
+Inspecionar container(dados, volumes e afins):  
+docker container inspect ID_CONTAINER(ou so primeiros tres chras do nome)  
+  
+Copiando um arquivo de dentro de um container para o host:  
+Primeiros criam container com nginx: docker container run -d --name nginx1 -p 80:80 nginx  
+Agora copiamos o arquivo index.html: docker container cp nginx1:/usr/share/nginx/html/index.html ./code  
+Dando um bind de um arquivo do host para dentro de um container(legal pq não mapeamos um volume e sim um arquivo apenas que esta em uma pasta do host):  
+docker container run -d --name nginx2 -v $(pwd)/code/index.html:/usr/share/nginx/html/index.html -p 8181:80 nginx  
 
