@@ -114,8 +114,8 @@ docker run -it fidelis/server_test:1.0 /bin/bash
 
 
 2020.01.30:  
-Algumas das principais pastas do docker: 
-/var/lib/docker 
-/var/lib/docker/volumes 
-/var/lib/containerd 
+Algumas das principais pastas do docker:  
+/var/lib/docker  
+/var/lib/docker/volumes  
+/var/lib/containerd  
 
