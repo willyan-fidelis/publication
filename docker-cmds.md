@@ -123,4 +123,8 @@ Liistando volumes:
 docker volume ls  
 Vc pode utilizar os tres primeiros chars do ID do container para remove-lo ao invez da iD toda:
 Remover tres containers(g79  047 4k5) ficaria assim: docker rm -f g79  047 4k5  
+Apagar volumes:  
+docker volume prune  
+Ao deletar volumes um grande espaço pode ser limpo e economizado(mysql por exemplo cria um volume altomaticamente com docker run).  
+
 
