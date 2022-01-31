@@ -113,9 +113,14 @@ Agora ja podemos usar essa imagem normalmente:
 docker run -it fidelis/server_test:1.0 /bin/bash  
 
 
-2020.01.30:  
+2022.01.30:  
 Algumas das principais pastas do docker:  
 /var/lib/docker  
 /var/lib/docker/volumes  
 /var/lib/containerd  
+  
+Liistando volumes:  
+docker volume ls  
+Vc pode utilizar os tres primeiros chars do ID do container para remove-lo ao invez da iD toda:
+Remover tres containers(g79  047 4k5) ficaria assim: docker rm -f g79  047 4k5  
 
